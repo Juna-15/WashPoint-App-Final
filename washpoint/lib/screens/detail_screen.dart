@@ -44,19 +44,17 @@ class _DetailScreenState extends State<DetailScreen> {
 
   Future<void> _openMap() async {
     if (widget.latitude == null || widget.longitude == null) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text('Lokasi tidak tersedia.')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Lokasi tidak tersedia.'))); 
       return;
     }
-    final Uri url = Uri.parse(
-      'http://googleusercontent.com/maps.google.com/maps?q=${widget.latitude},${widget.longitude}',
-    );
-    if (!await launchUrl(url)) {
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Tidak dapat membuka peta.')),
-      );
+    
+    
+    final Uri url = Uri.parse('https://www.google.com/maps/search/?api=1&query=${widget.latitude},${widget.longitude}');
+    
+    
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      if (!mounted) return; 
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Tidak dapat membuka peta.')));
     }
   }
 
