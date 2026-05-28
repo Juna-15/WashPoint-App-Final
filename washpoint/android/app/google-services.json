@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "929864622331",
+    "project_id": "washpoint-f2e9b",
+    "storage_bucket": "washpoint-f2e9b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929864622331:android:3942ea32a1f251371e905e",
+        "android_client_info": {
+          "package_name": "com.example.washpoint"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB85IgflWGnUgcfde_rb0TiINKjzYzxiNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
